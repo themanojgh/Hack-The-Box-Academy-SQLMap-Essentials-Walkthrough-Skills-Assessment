@@ -1,5 +1,19 @@
 This repository contains my walkthrough and notes from the SQLMap Essentials module on Hack The Box Academy. The exercises and final assessment helped sharpen my skills in identifying and exploiting SQL Injection vulnerabilities using SQLMap.
 
+## How to get case file?
+
+Start Burp Suite and configure your browser to use it as a proxy (usually 127.0.0.1:8080).
+
+Navigate to the vulnerable web page in your browser (e.g., the Catalog page or form submission).
+
+Capture the request using the Proxy > HTTP history tab in Burp.
+
+Right-click the request > "Save item" > Save it as Case1.txt, shop.txt, etc.
+
+Format: Plain HTTP request (no headers or extra encoding)
+
+File Extension: .txt (SQLMap accepts raw HTTP requests this way)
+
 ## Module Exercises ##
 
 ## Case 1: Basic Dump ##
