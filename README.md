@@ -66,47 +66,39 @@ find / -type f -iname "*flag*" 2>/dev/null
 ## Skills Assessment: Minishop Web App ##
 
 ## Overview ##
+### Application : Minishop
+### Pages Analyzed: Blog, Contact Us, Catalog
+### Findings
+### Blog: Not vulnerable (form action is '#')
+### Contact Us: Not vulnerable (form action is '#')
+### Catalog (/shop): Vulnerable — uses JavaScript to post JSON to action.php
 
-### Application ### : Minishop
+## Exploitation
+### Intercepted request using Burp Suite
+### Saved to shop.txt
 
-Pages Analyzed: Blog, Contact Us, Catalog
-
-Findings
-
-Blog: Not vulnerable (form action is '#')
-
-Contact Us: Not vulnerable (form action is '#')
-
-Catalog (/shop): Vulnerable — uses JavaScript to post JSON to action.php
-
-Exploitation
-
-Intercepted request using Burp Suite
-
-Saved to shop.txt
-
-Exploited with SQLMap:
+## Exploited with SQLMap:
 
 sqlmap -r shop.txt --batch -p 'id' --random-agent \
 --tamper=between --dbms=MySQL -D production -T final_flag --dump
 
-Outcome
+## Outcome
 
 Successfully dumped final_flag table from the production database.
 
-Conclusion
+## Conclusion
 
-This module strengthened my understanding of:
+**This module strengthened my understanding of:**
 
-SQL injection techniques (Boolean-based, Time-based, Union-based)
+_SQL injection techniques (Boolean-based, Time-based, Union-based)
+_
+_Tamper scripts, CSRF tokens, and header injection_
 
-Tamper scripts, CSRF tokens, and header injection
+_File read and OS shell interaction_
 
-File read and OS shell interaction
+_Real-world application analysis and exploitation_
 
-Real-world application analysis and exploitation
-
-I plan to continue my journey through the Hack The Box Pentester Pathway, with a focus on advanced web application testing, mobile app security, and red team tactics.
+_I plan to continue my journey through the Hack The Box Pentester Pathway, with a focus on advanced web application testing, mobile app security, and red team tactics._
 
 📁 Repository Structure
 
@@ -122,17 +114,11 @@ I plan to continue my journey through the Hack The Box Pentester Pathway, with a
 
 Feel free to fork this repository and use it as a reference for your own HTB Academy progress!
 
-🚀 Author
-
-Manoj Ghimire
-
-Connect on LinkedIn | Contact: email@example.com
-
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License.
 
-MIT License
+**MIT License**
 
 Copyright (c) 2025 Manoj Ghimire
 
