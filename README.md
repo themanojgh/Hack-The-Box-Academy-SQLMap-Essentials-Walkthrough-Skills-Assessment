@@ -67,7 +67,7 @@ find / -type f -iname "*flag*" 2>/dev/null
 
 ## Overview ##
 
-# Application # : Minishop
+### Application ### : Minishop
 
 Pages Analyzed: Blog, Contact Us, Catalog
 
